@@ -1,0 +1,15 @@
+[Unit]
+Description=Figma Images API
+After=network.target
+
+[Service]
+WorkingDirectory=/srv/figma/figma-api
+User=root
+Group=root
+Restart=always
+Type=simple
+
+ExecStart=/srv/figma/figma-api/figma-api
+
+[Install]
+WantedBy=multi-user.target 
